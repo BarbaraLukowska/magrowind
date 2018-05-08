@@ -294,9 +294,16 @@ li ~ li {
 
 .footer {
   padding: 3rem 0;
-  display: flex;
   border-bottom: 1px solid #535960;
 }
+.footer > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
 .footer + p {
   padding: 2rem 0;
 }
@@ -306,26 +313,39 @@ li ~ li {
 }
 
 .contact-info {
-  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
-.contact-info > p {
-  font-weight: 200;
+
+.contact-info > span {
+  font-size: 2rem;
+  margin-right: 1rem;
 }
-.contact-info > h2 {
-  font-weight: 500;
-  line-height: 4rem;
+
+.details {
+  text-align: left;
+}
+
+.contact-social {
+  flex-direction: column;
+}
+.details > h2 {
+  /* text-transform: uppercase; */
+  letter-spacing: .5rem;
+  font-size: 1.25rem;
 }
 
 .fa-facebook-square {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .fa-amazon {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-.contact-info > i ~ i {
+.social-icons > i ~ i {
   margin-left: 1rem;
 }
