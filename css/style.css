@@ -35,17 +35,37 @@ body {
   margin: 0 auto;
 }
 
-
 .navbar {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  position: fixed;
-  max-width: 1170px;
+  padding: 1rem 3rem;
   width: 100%;
+  position: absolute;
+  transition: top 3s;
 }
 
+.fixed {
+  position: fixed;
+  z-index: 999999;
+  background: #2D3134;
+  top: 0;
+  opacity: .8;
+}
+
+.content {
+  width:640px;
+  height:500vh;
+  font-size:14px;
+  padding-top:100px;
+  margin:0 auto 0;
+}
+
+.sticky {
+  position:fixed;
+  top:0;
+}
 .navbar-brand {
   font-size: 2rem;
   color: white;
@@ -100,7 +120,7 @@ li ~ li {
     rgba(0, 0, 0, 0.4)
     );
   }
-  
+
 @-webkit-keyframes fadeInOpacity {
   0% {
     opacity: .4;
@@ -156,7 +176,7 @@ li ~ li {
 }
 
 .section {
-  color: #333;  
+  color: #333;
 }
 
 /* section about */
@@ -293,7 +313,7 @@ li ~ li {
 }
 
 .footer {
-  padding: 3rem 0;
+  padding: 4rem 0;
   border-bottom: 1px solid #535960;
 }
 .footer > h1 {
@@ -301,11 +321,12 @@ li ~ li {
   text-transform: uppercase;
   letter-spacing: .5rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .footer + p {
   padding: 2rem 0;
+  text-align: center;
 }
 .form {
   flex-basis: 50%;
@@ -328,9 +349,6 @@ li ~ li {
   text-align: left;
 }
 
-.contact-social {
-  flex-direction: column;
-}
 .details > h2 {
   /* text-transform: uppercase; */
   letter-spacing: .5rem;
@@ -339,13 +357,13 @@ li ~ li {
 
 .fa-facebook-square {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .fa-amazon {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 .social-icons > i ~ i {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
