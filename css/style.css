@@ -137,7 +137,7 @@ li ~ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 970px;
+  min-height: 990px;
 }
 
 .jumbotron > h1 {
