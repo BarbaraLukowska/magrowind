@@ -272,14 +272,24 @@ li ~ li {
 .offer-description > h1 {
   line-height: 3rem;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .offer-description > ul > li {
   list-style-type: none;
 }
 
-.offer-details > p {
+.offer-details-row {
+  display: flex;
+  align-items: center;
   line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.fa-check-circle {
+  color: #535960;
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 .btn-secondary {
