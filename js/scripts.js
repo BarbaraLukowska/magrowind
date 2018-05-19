@@ -21,4 +21,10 @@
     }
   });
 
+  /* burger nav */
+  $(".burger").on("click", function(){
+    $("nav ul").toggleClass("open");
+    $(".burger-nav").toggleClass("open");
+  });
+
 })();
