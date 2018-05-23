@@ -114,7 +114,6 @@ li ~ li {
   .burger-nav {
     width: 100%;
     padding: 1rem 2rem;
-    opacity: .8;
     position: absolute;
   }
 
@@ -131,7 +130,7 @@ li ~ li {
     display: flex;
     flex-direction: column;
     background: #2D3134;
-    opacity: .8;
+    opacity: .9;
     width: 100%;
     line-height: 4rem;
     text-align: center;
@@ -140,19 +139,24 @@ li ~ li {
   .burger-nav.open {
     border-bottom: 1px solid #535960;
     background: #2D3134;
-    opacity: .8;
+    opacity: .9;
   }
 
   #mainNav.open > li {
     border-bottom: 1px solid #535960;
     margin: 0;
   }
+
+  .fixed {
+    position: fixed;
+    z-index: 999999;
+    background: #2D3134;
+    opacity: .9;
+  }
+  .jumbotron > h1 {
+    text-align: center;
+  }
 }
-
-
-/* #mainNav.open > .item-5 {
-
-} */
 
 #home {
   background-image:
@@ -170,9 +174,10 @@ li ~ li {
 /* purchase button*/
 
 #purchase {
-  border: 1.4px solid white;
+  border: 1.5px solid white;
   padding: .5rem 1rem;
   border-radius: 30px;
+  font-weight: 500;
 }
 
 #purchase:hover {

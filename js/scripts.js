@@ -4,9 +4,11 @@
   var navHeight = $( window ).height() - 750;
     if ($(window).scrollTop() > navHeight) {
       $('.navbar').addClass('fixed');
+      $('.burger-nav').addClass('fixed');
     }
     else {
       $('.navbar').removeClass('fixed');
+      $('.burger-nav').removeClass('fixed');
     }
   });
 
@@ -16,7 +18,7 @@
     if( target.length ) {
       event.preventDefault();
       $('html, body').stop().animate({
-        scrollTop: target.offset().top - 72
+        scrollTop: target.offset().top
       }, 1500);
     }
   });
