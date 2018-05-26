@@ -28,6 +28,7 @@
 body {
   font-family: 'Quicksand', Fallback, sans-serif;
   font-size: 16px;
+  width: 100%;
 }
 
 .container {
@@ -90,17 +91,15 @@ li ~ li {
 .nav-link {
   text-decoration: none;
   color: white;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 .nav-link:visited{
   color: white;
 }
 
-/* .burger {
-  position: absolute;
-  top: 1.5rem;
-  left: 2.5rem;
-} */
+.nav-link-active {
+  border-bottom: 1.5px solid #ef9f19;
+}
 
 /* responsive for navigation */
 @media (max-width: 991px) {
@@ -158,6 +157,12 @@ li ~ li {
   }
 }
 
+@media (max-width: 768px) {
+  .jumbotron > h1 {
+    text-align: center;
+  }
+}
+
 #home {
   background-image:
     linear-gradient(
@@ -173,19 +178,12 @@ li ~ li {
 
 /* purchase button*/
 
-#purchase {
-  border: 1.5px solid white;
+.item-5 {
+  border: 1.4px solid white;
   padding: .5rem 1rem;
   border-radius: 30px;
   font-weight: 500;
 }
-
-#purchase:hover {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)
-    );
-  }
 
 @-webkit-keyframes fadeInOpacity {
   0% {
@@ -197,11 +195,15 @@ li ~ li {
 }
 
 .fade-in:hover {
-  opacity: .9;
+  opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  border: 2px solid #ef9f19;
+  color: #ef9f19;
+  font-weight: 700;
+  margin: -1px;
 }
 
 /* jumbotron*/
@@ -225,40 +227,45 @@ li ~ li {
   line-height: 2rem;
   width: 50%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .btn-primary {
   background: transparent;
   color: white;
   padding: 0 2rem;
-  margin-top: 1rem;
   border: 1px solid white;
   border-radius: 30px;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 3rem;
   cursor: pointer;
-  outline: none;
+  text-decoration: none;
 }
 
 .section {
   color: #333;
 }
 
+@media (max-width: 768px) {
+  #about, #offer, .about-rules {
+    flex-wrap: wrap
+  }
+}
+
 /* section about */
 
 #about {
   display: flex;
-  min-height: 500px;
 }
 
 .about-description {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 0 3rem;
+  align-items: center;
+  padding: 3rem 3rem;
   background: #f7f7f8;
 }
 
@@ -288,10 +295,12 @@ li ~ li {
   display: flex;
   align-items: center;
 }
+
 .about-rules {
   display: flex;
-  padding: 3rem 0;
+  padding: 3rem 3rem;
 }
+
 .about-item {
   text-align: center;
 }
@@ -310,14 +319,29 @@ li ~ li {
 }
 
 .about-item > p {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-description {
+    flex-basis: unset;
+    display: block;
+    text-align: center;
+  }
+  .about-image {
+    min-height: 400px;
+    flex-basis: unset;
+  }
+  .about-item ~ .about-item {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
 }
 
 /* offer section */
 
 #offer{
   display: flex;
-  min-height: 600px;
 }
 
 .offer-image {
@@ -339,7 +363,7 @@ li ~ li {
   align-items: center;
   justify-content: center;
   flex-basis: 50%;
-  padding: 0 3rem;
+  padding: 3rem 3rem;
   background: #f7f7f8;
 }
 
@@ -353,15 +377,20 @@ li ~ li {
   list-style-type: none;
 }
 
+.offer-details {
+  margin-bottom: 1rem;
+}
+
 .offer-details-row {
   display: flex;
   align-items: center;
   line-height: 1.5rem;
   margin-bottom: 1rem;
 }
-
+.offer-details-row > p > span {
+  font-weight: 700;
+}
 .fa-check-circle {
-  color: #535960;
   margin-right: 1rem;
   font-size: 1.5rem;
 }
@@ -370,7 +399,6 @@ li ~ li {
   background: transparent;
   color: #333;
   padding: 0 2rem;
-  margin-top: 1rem;
   border: 1px solid #333;
   border-radius: 30px;
   font-size: 1.25rem;
@@ -378,6 +406,16 @@ li ~ li {
   line-height: 3rem;
   cursor: pointer;
   outline: none;
+}
+
+@media (max-width: 768px) {
+  .offer-description {
+    flex-basis: unset;
+  }
+  .offer-image {
+    min-height: 400px;
+    flex-basis: unset;
+  }
 }
 
 /*footer */
@@ -388,7 +426,7 @@ li ~ li {
 }
 
 .footer {
-  padding: 4rem 0;
+  padding: 3rem 3rem;
   border-bottom: 1px solid #535960;
 }
 .footer > h1 {
@@ -452,4 +490,21 @@ li ~ li {
   background: #2D3134;
   color: white;
   padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+    display: block;
+  }
+  .details {
+    text-align: center;
+    margin-top: .5rem;
+  }
+  .contact-info > span {
+    margin: 0;
+  }
+  .contact-info ~ .contact-info {
+    margin-top: 3rem;
+  }
 }
