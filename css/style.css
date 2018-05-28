@@ -515,3 +515,9 @@ li ~ li {
     margin-top: 3rem;
   }
 }
+
+/* page offer */
+.gallery {
+  display: flex;
+  min-height: 990px;
+}
