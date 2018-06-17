@@ -97,13 +97,17 @@ li ~ li {
   text-decoration: none;
   color: white;
   line-height: 2rem;
+  padding: 25px 20px;
 }
 .nav-link:visited{
   color: white;
 }
 
 .nav-link-active {
-  border-bottom: 1.5px solid #ef9f19;
+  background-color:#ef9f19;
+  opacity: .8;
+  padding: 25px 20px;
+  font-weight: 700;
 }
 
 /* responsive for navigation */

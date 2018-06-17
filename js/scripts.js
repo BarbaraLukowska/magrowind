@@ -30,8 +30,8 @@
           menu = target;
       $target = $(target);
       $('html, body').stop().animate({
-        'scrollTop': $target.offset().top - 70
-      }, 1500, 'swing', function () {
+        'scrollTop': $target.offset().top + 18
+      }, 1500, function () {
         window.location.hash = target;
         $(document).on("scroll", onScroll);
       });
