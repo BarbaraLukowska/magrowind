@@ -68,7 +68,7 @@ h1 {
   z-index: 999999;
   background: #2D3134;
   top: 0;
-  opacity: .8;
+  opacity: .9;
 }
 
 .sticky {
@@ -164,6 +164,14 @@ li ~ li {
   .jumbotron > h1 {
     text-align: center;
   }
+  .nav-link-active {
+    background-color: transparent;
+    padding: 20px 20px;
+  }
+  .nav-link-active:visited {
+    color: #ef9f19;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -435,7 +443,7 @@ li ~ li {
 }
 
 .footer {
-  padding: 4rem 3rem;
+  padding: 6rem 3rem;
   border-bottom: 1px solid #535960;
 }
 .footer > h1 {
@@ -443,7 +451,7 @@ li ~ li {
   text-transform: uppercase;
   letter-spacing: .5rem;
   font-weight: 300;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .footer + p {
