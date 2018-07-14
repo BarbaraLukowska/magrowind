@@ -22,9 +22,9 @@
       $(document).off("scroll");
 
       $('a').each(function () {
-          $(this).removeClass('nav-link-active');
+          $(this).removeClass('active');
       })
-      $(this).addClass('nav-link-active');
+      $(this).addClass('active');
 
       var target = this.hash,
           menu = target;
@@ -43,11 +43,11 @@
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
       if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $('navbar ul li a').removeClass("nav-link-active");
-        currLink.addClass("nav-link-active");
+        $('navbar ul li').removeClass("active");
+        currLink.addClass("active");
       }
       else{
-        currLink.removeClass("nav-link-active");
+        currLink.removeClass("active");
       }
     });
   }
